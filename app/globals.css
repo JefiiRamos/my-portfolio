@@ -6,8 +6,8 @@
   --foreground: #f4efe7;
   --muted: #9aa39c;
   --muted-strong: #d4dad4;
-  --panel: rgba(14, 18, 24, 0.82);
-  --panel-hover: rgba(20, 26, 34, 0.92);
+  --panel: var(--background);
+  --panel-hover: var(--background);
   --panel-soft: rgba(255, 255, 255, 0.04);
   --line: rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.18);
@@ -42,10 +42,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
-  background-image:
-    radial-gradient(circle at 8% 0%, rgba(141, 214, 201, 0.09), transparent 28%),
-    radial-gradient(circle at 92% 8%, rgba(94, 125, 173, 0.08), transparent 22%),
-    linear-gradient(180deg, #0e1218 0%, var(--background) 50%, #080a0d 100%);
 }
 
 body::selection {
@@ -67,44 +63,11 @@ a {
   flex-shrink: 0;
 }
 
-/* Ambient */
-.ambient {
-  position: fixed;
-  pointer-events: none;
-  border-radius: 9999px;
-  filter: blur(90px);
-  opacity: 0.32;
-  z-index: 0;
-}
-
-.ambient-one {
-  top: 4rem;
-  left: -6rem;
-  width: 20rem;
-  height: 20rem;
-  background: rgba(141, 214, 201, 0.14);
-}
-
-.ambient-two {
-  top: 40%;
-  right: -8rem;
-  width: 24rem;
-  height: 24rem;
-  background: rgba(94, 125, 173, 0.1);
-}
-
-.ambient-three {
-  bottom: 8%;
-  left: 35%;
-  width: 16rem;
-  height: 16rem;
-  background: rgba(255, 235, 202, 0.08);
-}
-
 /* Layout */
 .site-main {
   position: relative;
   z-index: 1;
+  background: var(--background);
 }
 
 .site-header {
@@ -112,8 +75,7 @@ a {
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--line);
-  background: rgba(10, 13, 16, 0.82);
-  backdrop-filter: blur(16px);
+  background: var(--background);
 }
 
 .site-header__inner {
@@ -210,9 +172,8 @@ a {
 .panel {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: var(--panel);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+  background: var(--background);
+  box-shadow: none;
   transition:
     transform 220ms ease,
     border-color 220ms ease,
@@ -224,9 +185,7 @@ a {
 }
 
 .panel--accent {
-  background:
-    radial-gradient(circle at top right, var(--accent-dim), transparent 42%),
-    var(--panel);
+  background: var(--background);
 }
 
 /* Section shell */
@@ -234,6 +193,7 @@ a {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 4.5rem 1.5rem;
+  background: var(--background);
 }
 
 .section-block__header {
@@ -284,6 +244,7 @@ a {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
+  background: var(--background);
 }
 
 .hero__grid {
@@ -529,6 +490,104 @@ a {
   color: var(--muted);
 }
 
+/* Differentials */
+.differentials-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.differentials-grid,
+.differentials-side {
+  display: grid;
+  gap: 1rem;
+}
+
+.differential-card,
+.principles-card,
+.quality-card-v2,
+.case-study-card {
+  padding: 1.5rem;
+}
+
+.differential-card__index {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.differential-card__title,
+.case-study-card__title {
+  margin-top: 0.8rem;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.differential-card__text,
+.case-study-card__text {
+  margin-top: 0.65rem;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.principles-card__label,
+.quality-card-v2__label,
+.case-study-card__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.principles-card__list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.principles-card__list li {
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent-dim);
+  line-height: 1.7;
+  color: var(--muted-strong);
+}
+
+.quality-card-v2__grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.quality-card-v2__item {
+  display: flex;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.85rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+}
+
+.quality-card-v2__item p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.quality-card-v2__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.45rem;
+  border-radius: 9999px;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(141, 214, 201, 0.45);
+  flex-shrink: 0;
+}
+
 /* Stack */
 .stack-grid {
   display: grid;
@@ -592,9 +651,7 @@ a {
 
 .project-card-v2--featured {
   border-color: rgba(141, 214, 201, 0.28);
-  background:
-    radial-gradient(circle at top left, var(--accent-dim), transparent 50%),
-    var(--panel);
+  background: var(--background);
 }
 
 .project-card-v2__head {
@@ -646,6 +703,16 @@ a {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.25rem;
+}
+
+/* Case study */
+.case-study-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-study-card--intro {
+  background: var(--background);
 }
 
 .chip {
@@ -1045,7 +1112,8 @@ a {
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--line);
-  margin-top: 2rem;
+  margin-top: 0;
+  background: var(--background);
 }
 
 .site-footer__inner {
@@ -1180,6 +1248,14 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .differentials-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .differentials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1190,6 +1266,14 @@ a {
 
   .github-layout {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .case-study-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .case-study-card--intro {
+    grid-column: span 3;
   }
 
   .contact-grid {

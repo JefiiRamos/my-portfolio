@@ -68,6 +68,38 @@ export const pillars = [
   },
 ] as const;
 
+export const differentiators = [
+  {
+    title: "Estética com intenção",
+    description:
+      "Minimalismo para mim não é vazio. Eu uso contraste, ritmo, espaço e objetos visuais para criar presença sem perder clareza.",
+  },
+  {
+    title: "Código orientado à experiência",
+    description:
+      "Penso no front-end como produto: hierarquia, fluidez, semântica, responsividade e performance precisam funcionar juntos.",
+  },
+  {
+    title: "Design e implementação no mesmo fluxo",
+    description:
+      "Consigo sair da direção visual para o código mantendo consistência, refinamento de interface e estrutura mais limpa.",
+  },
+] as const;
+
+export const interfacePrinciples = [
+  "Hierarquia clara antes de efeito visual.",
+  "Animação para conduzir percepção, não para distrair.",
+  "Seções com profundidade, contraste e respiro.",
+  "Interface marcante sem perder usabilidade.",
+] as const;
+
+export const frontEndQualitySignals = [
+  "Responsividade pensada desde a composição inicial.",
+  "Semântica e estrutura para leitura mais clara do layout.",
+  "Componentização para evolução do projeto.",
+  "Atenção a performance, peso visual e ritmo de navegação.",
+] as const;
+
 export const stackGroups = [
   {
     category: "Front-end",
@@ -165,6 +197,23 @@ export const projects = [
     year: "2025",
   },
 ] as const;
+
+export const featuredCaseStudy = {
+  project: "Triply",
+  summary:
+    "Aplicação web para busca de voos e hotéis com foco em interface moderna, escaneabilidade e sensação visual mais premium.",
+  problemTitle: "Como evitar a interface carregada comum em produtos de viagem?",
+  problem:
+    "Plataformas desse tipo costumam concentrar muita informação, o que torna a navegação cansativa e reduz a percepção de qualidade do produto.",
+  solutionTitle: "Organizar fluxo e leitura com estrutura visual forte.",
+  solution:
+    "Usei React, Next.js e Tailwind CSS para construir uma interface mais limpa, com melhor hierarquia, recortes claros de conteúdo e navegação mais fluida.",
+  criteriaTitle: "O objetivo era unir presença visual com usabilidade.",
+  criteria:
+    "O projeto resume como penso front-end: composição, clareza, consistência e decisões que fazem a página parecer menos genérica e mais profissional.",
+  live: "https://triplyfly.vercel.app/",
+  repo: "https://github.com/JefiiRamos/Triply",
+} as const;
 
 export const experience = [
   {

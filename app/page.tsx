@@ -1,5 +1,7 @@
 import { AboutSection } from "@/components/AboutSection";
+import { CaseStudySection } from "@/components/CaseStudySection";
 import { ContactSection } from "@/components/ContactSection";
+import { DifferentialsSection } from "@/components/DifferentialsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { Footer } from "@/components/Footer";
 import { GitHubSection } from "@/components/GitHubSection";
@@ -11,17 +13,15 @@ import { StackSection } from "@/components/StackSection";
 export default function Home() {
   return (
     <>
-      <div className="ambient ambient-one" aria-hidden />
-      <div className="ambient ambient-two" aria-hidden />
-      <div className="ambient ambient-three" aria-hidden />
-
       <Header />
 
       <main className="site-main">
         <HeroSection />
         <AboutSection />
+        <DifferentialsSection />
         <StackSection />
         <ProjectsSection />
+        <CaseStudySection />
         <ExperienceSection />
         <GitHubSection />
         <ContactSection />
