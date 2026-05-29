@@ -1,14 +1,14 @@
-import { experience } from "@/lib/profile";
+﻿import { experience } from "@/lib/profile";
 import { Section } from "@/components/Section";
 
 export function ExperienceSection() {
   return (
     <Section
       id="trajetoria"
-      number="04"
-      tag="Trajetória"
-      title="Experiência profissional e formação que sustentam meu trabalho."
-      description="Da rotina administrativa ao desenvolvimento web em produção — uma linha de evolução técnica e de comunicação."
+      number="07"
+      tag="Trajetoria"
+      title="Minha evolucao combina base tecnica, entrega real e disciplina de execucao."
+      description="Cada etapa adicionou uma camada util ao meu trabalho: comunicacao, organizacao, visao de produto e pratica em desenvolvimento web."
     >
       <div className="timeline-v2">
         {experience.map((item, index) => (
@@ -24,7 +24,7 @@ export function ExperienceSection() {
               <div className="timeline-v2__meta">
                 <span className="timeline-v2__period">{item.period}</span>
                 <span
-                  className={`timeline-v2__type timeline-v2__type--${item.type === "Formação" ? "edu" : "work"}`}
+                  className={`timeline-v2__type timeline-v2__type--${item.type === "Formacao" ? "edu" : "work"}`}
                 >
                   {item.type}
                 </span>

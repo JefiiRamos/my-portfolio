@@ -5,7 +5,7 @@ export function StackSection() {
   return (
     <Section
       id="stack"
-      number="02"
+      number="03"
       tag="Stack & ferramentas"
       title="O que uso para construir produtos web completos."
       description="Front-end como foco principal, com base sólida em back-end e dados para entregar features de ponta a ponta quando o projeto pede."

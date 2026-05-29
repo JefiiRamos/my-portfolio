@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Section } from "@/components/Section";
 import {
   formatGitHubDate,
@@ -35,10 +35,10 @@ export async function GitHubSection() {
   return (
     <Section
       id="github"
-      number="05"
+      number="08"
       tag="GitHub"
-      title="Código aberto e evolução visível na comunidade."
-      description={`Perfil @${GITHUB_USERNAME} com repositórios atualizados automaticamente a cada hora.`}
+      title="Meu GitHub funciona como historico publico de consistencia, estudo e entrega."
+      description={`Perfil @${GITHUB_USERNAME} com repositorios atualizados automaticamente para mostrar evolucao continua, nao so vitrine.`}
     >
       <div className="github-layout">
         <article className="panel panel--accent github-profile">
@@ -64,11 +64,7 @@ export async function GitHubSection() {
                 {user?.name?.trim() || profile.name}
               </h3>
               <p className="github-profile__since">
-                No GitHub desde{" "}
-                {user
-                  ? new Date(user.created_at).getFullYear()
-                  : "2023"}{" "}
-                · {user ? yearsOnGitHub(user.created_at) : "3"}+ anos
+                No GitHub desde {user ? new Date(user.created_at).getFullYear() : "2023"} · {user ? yearsOnGitHub(user.created_at) : "3"}+ anos
               </p>
             </div>
           </div>
@@ -80,7 +76,7 @@ export async function GitHubSection() {
               <span className="github-mini-stat__value">
                 {user?.public_repos ?? repos.length}
               </span>
-              <span className="github-mini-stat__label">Repositórios</span>
+              <span className="github-mini-stat__label">Repositorios</span>
             </div>
             <div className="github-mini-stat">
               <span className="github-mini-stat__value">
@@ -104,7 +100,7 @@ export async function GitHubSection() {
               rel="noreferrer"
             >
               <GitHubIcon />
-              Perfil completo
+              Abrir perfil
             </a>
             <a
               className="button-secondary"
@@ -112,19 +108,19 @@ export async function GitHubSection() {
               target="_blank"
               rel="noreferrer"
             >
-              Todos os repos
+              Ver todos os repos
             </a>
           </div>
         </article>
 
         <article className="panel github-readme">
-          <p className="github-readme__tag">Destaques do README</p>
+          <p className="github-readme__tag">Leitura de perfil</p>
           <ul className="github-readme__list">
-            <li>Frontend Developer — React & Next.js</li>
-            <li>Universidade Positivo — Engenharia de Software</li>
-            <li>Base técnica em Desenvolvimento de Sistemas</li>
-            <li>Experiência full stack: front, back-end e banco</li>
-            <li>Conquistas: Pull Shark e YOLO no GitHub</li>
+            <li>Front-end com foco em React, Next.js e direcao visual</li>
+            <li>Formacao em Engenharia de Software com base tecnica previa</li>
+            <li>Projetos publicados que mostram pratica alem de teoria</li>
+            <li>Vivencia full stack suficiente para dialogar com dados e APIs</li>
+            <li>Historico publico de construcao continua e experimentacao</li>
           </ul>
           <div className="github-readme__goals">
             <p className="github-readme__goals-title">Metas</p>
@@ -139,7 +135,7 @@ export async function GitHubSection() {
 
       {featuredRepos.length > 0 ? (
         <div className="github-repos">
-          <p className="github-repos__label">Repositórios em destaque</p>
+          <p className="github-repos__label">Repositorios em destaque</p>
           <div className="github-repos__grid">
             {featuredRepos.map((repo) => (
               <article key={repo.id} className="panel repo-card-v2">
@@ -164,7 +160,7 @@ export async function GitHubSection() {
                     rel="noreferrer"
                     className="link-arrow"
                   >
-                    Código
+                    Codigo
                   </a>
                   {repo.homepage ? (
                     <a

@@ -5,7 +5,7 @@ export function ProjectsSection() {
   return (
     <Section
       id="projetos"
-      number="03"
+      number="04"
       tag="Projetos"
       title="Entregas reais publicadas no GitHub e em produção."
       description="Seleção dos principais repositórios — com demos ao vivo quando disponíveis. A lista completa está na seção GitHub, atualizada pela API."

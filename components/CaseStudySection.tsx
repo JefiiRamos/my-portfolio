@@ -1,14 +1,14 @@
-import { Section } from "@/components/Section";
+﻿import { Section } from "@/components/Section";
 import { featuredCaseStudy } from "@/lib/profile";
 
 export function CaseStudySection() {
   return (
     <Section
       id="case"
-      number="05"
+      number="06"
       tag="Case em foco"
-      title="Projeto não é só vitrine. Também é raciocínio, decisão e intenção."
-      description="Em vez de apenas listar tecnologia, este bloco mostra como penso produto e interface em um projeto real."
+      title="Projeto, para mim, tambem e argumento. Ele precisa provar leitura de produto, decisao visual e execucao."
+      description="Em vez de so exibir stack, este bloco mostra como raciocino quando uma interface precisa parecer melhor e funcionar melhor."
     >
       <div className="case-study-grid">
         <article className="panel panel--accent case-study-card case-study-card--intro">
@@ -30,7 +30,7 @@ export function CaseStudySection() {
               rel="noreferrer"
               className="link-arrow"
             >
-              Repositório
+              Repositorio
             </a>
           </div>
         </article>
@@ -42,13 +42,13 @@ export function CaseStudySection() {
         </article>
 
         <article className="panel case-study-card">
-          <p className="case-study-card__label">Solução</p>
+          <p className="case-study-card__label">Solucao</p>
           <h3 className="case-study-card__title">{featuredCaseStudy.solutionTitle}</h3>
           <p className="case-study-card__text">{featuredCaseStudy.solution}</p>
         </article>
 
         <article className="panel case-study-card">
-          <p className="case-study-card__label">Critérios</p>
+          <p className="case-study-card__label">Criterios</p>
           <h3 className="case-study-card__title">{featuredCaseStudy.criteriaTitle}</h3>
           <p className="case-study-card__text">{featuredCaseStudy.criteria}</p>
         </article>

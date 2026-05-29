@@ -1,13 +1,11 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { getGitHubUser, yearsOnGitHub } from "@/lib/github";
 import { profile } from "@/lib/profile";
 
 export async function HeroSection() {
   const githubUser = await getGitHubUser();
   const repoCount = githubUser?.public_repos ?? 25;
-  const githubYears = githubUser
-    ? yearsOnGitHub(githubUser.created_at)
-    : 3;
+  const githubYears = githubUser ? yearsOnGitHub(githubUser.created_at) : 3;
 
   return (
     <section className="hero">
@@ -35,7 +33,7 @@ export async function HeroSection() {
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn
+              Ver LinkedIn
             </a>
             <a
               className="button-secondary"
@@ -43,10 +41,10 @@ export async function HeroSection() {
               target="_blank"
               rel="noreferrer"
             >
-              Ver GitHub
+              Explorar GitHub
             </a>
             <a className="button-ghost" href="#contato">
-              Falar comigo
+              Conversar sobre vaga
             </a>
           </div>
         </div>
@@ -77,24 +75,24 @@ export async function HeroSection() {
           <div className="hero__stats">
             <div className="hero__stat">
               <span className="hero__stat-value">{repoCount}</span>
-              <span className="hero__stat-label">repos no GitHub</span>
+              <span className="hero__stat-label">repositorios publicos</span>
             </div>
             <div className="hero__stat">
               <span className="hero__stat-value">{githubYears}+</span>
-              <span className="hero__stat-label">anos codando</span>
+              <span className="hero__stat-label">anos de pratica continua</span>
             </div>
             <div className="hero__stat">
               <span className="hero__stat-value">2</span>
-              <span className="hero__stat-label">experiências dev</span>
+              <span className="hero__stat-label">frentes com entrega real</span>
             </div>
           </div>
 
           <div className="hero__panel-divider" />
 
           <ul className="hero__highlights">
-            <li>Solid Tech — interfaces, APIs e Prisma</li>
-            <li>Universidade Positivo — Eng. de Software</li>
-            <li>Triply, entregas CWB e +20 projetos no GitHub</li>
+            <li>Solid Tech - interface, integracao e base full stack</li>
+            <li>Universidade Positivo - Engenharia de Software</li>
+            <li>Projetos publicados, ritmo constante e construcao visivel</li>
           </ul>
         </aside>
       </div>

@@ -1,4 +1,4 @@
-import { Section } from "@/components/Section";
+﻿import { Section } from "@/components/Section";
 import {
   differentiators,
   frontEndQualitySignals,
@@ -11,8 +11,8 @@ export function DifferentialsSection() {
       id="diferenciais"
       number="02"
       tag="Diferenciais"
-      title="Mais do que interface bonita: critério de produto, código e experiência."
-      description="Esta seção existe para responder a pergunta que pesa em processo seletivo: por que me escolher para uma vaga front-end?"
+      title="Nao basta deixar bonito. Eu quero deixar convincente, utilizavel e tecnicamente solido."
+      description="Esta secao responde o que realmente pesa em recrutamento: como penso, como executo e por que meu front-end agrega alem da estetica."
     >
       <div className="differentials-layout">
         <div className="differentials-grid">
@@ -29,7 +29,7 @@ export function DifferentialsSection() {
 
         <div className="differentials-side">
           <article className="panel panel--accent principles-card">
-            <p className="principles-card__label">Princípios de interface</p>
+            <p className="principles-card__label">Principios de interface</p>
             <ul className="principles-card__list">
               {interfacePrinciples.map((item) => (
                 <li key={item}>{item}</li>
@@ -38,7 +38,7 @@ export function DifferentialsSection() {
           </article>
 
           <article className="panel quality-card-v2">
-            <p className="quality-card-v2__label">O que eu tento garantir no front-end</p>
+            <p className="quality-card-v2__label">O que meu front-end precisa sustentar</p>
             <div className="quality-card-v2__grid">
               {frontEndQualitySignals.map((item) => (
                 <div key={item} className="quality-card-v2__item">

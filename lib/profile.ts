@@ -1,13 +1,13 @@
-export const profile = {
+﻿export const profile = {
   name: "Jeferson Ramos",
   fullName: "Jeferson de Ramos Filho",
   role: "Front-end Developer",
-  location: "Curitiba, PR — Brasil",
-  availability: "Aberto a front-end, estágio ou colaboração",
-  tagline: "Interfaces modernas, funcionais e bem estruturadas.",
+  location: "Curitiba, PR - Brasil",
+  availability: "Disponivel para vaga front-end, estagio ou colaboracao",
+  tagline: "Interface forte, codigo limpo e leitura visual com intencao.",
   headline:
-    "Desenvolvo experiências web com React e Next.js, unindo clareza visual, performance e código organizado.",
-  bio: "Estudante de Engenharia de Software na Universidade Positivo, com base sólida em Desenvolvimento de Sistemas no ensino técnico. Atuo com foco em front-end, mas tenho vivência full stack — do layout à API e ao banco de dados.",
+    "Construo interfaces que elevam a percepcao do produto, com React e Next.js aplicados em experiencias claras, rapidas e visualmente marcantes.",
+  bio: "Sou estudante de Engenharia de Software e desenvolvedor front-end com base tecnica em Desenvolvimento de Sistemas. Meu diferencial esta em unir direcao visual, semantica, responsividade e organizacao de codigo para entregar interfaces que parecem mais maduras do que o nivel esperado para um perfil em formacao.",
   email: "jefiiramoos@gmail.com",
   phone: "+5541996169164",
   phoneDisplay: "+55 41 99616-9164",
@@ -22,112 +22,113 @@ export const navItems = [
   { href: "#sobre", label: "Sobre" },
   { href: "#stack", label: "Stack" },
   { href: "#projetos", label: "Projetos" },
-  { href: "#trajetoria", label: "Trajetória" },
+  { href: "#prints", label: "Prints" },
+  { href: "#trajetoria", label: "Trajetoria" },
   { href: "#github", label: "GitHub" },
   { href: "#contato", label: "Contato" },
 ] as const;
 
 export const facts = [
   {
-    label: "Formação",
+    label: "Formacao",
     value: "Eng. de Software",
-    detail: "Universidade Positivo — em andamento",
+    detail: "Universidade Positivo - em andamento",
   },
   {
-    label: "Base técnica",
-    value: "Técnico em DS",
-    detail: "Colégio Cívico Militar Guido Arzua",
+    label: "Base tecnica",
+    value: "Tecnico em DS",
+    detail: "Desenvolvimento de Sistemas com foco pratico",
   },
   {
     label: "Foco atual",
     value: "Front-end",
-    detail: "React, Next.js, UI/UX e performance",
+    detail: "React, Next.js, interface, UX e performance",
   },
   {
-    label: "Experiência",
+    label: "Entrega",
     value: "Full stack",
-    detail: "Front-end, APIs com Node.js, Prisma e MySQL",
+    detail: "Front-end forte com base em APIs, Prisma e MySQL",
   },
 ] as const;
 
 export const pillars = [
   {
-    title: "Interface com intenção",
+    title: "Interface com intencao",
     description:
-      "Hierarquia clara, contraste sutil e composição entre seções para guiar a leitura sem poluir a tela.",
+      "Eu penso cada secao como direcao de leitura: hierarquia, contraste, respiro e ritmo visual para guiar o olhar sem depender de excesso.",
   },
   {
-    title: "Código que escala",
+    title: "Codigo que sustenta produto",
     description:
-      "TypeScript, componentização em React e estrutura em Next.js para manter projetos organizados conforme crescem.",
+      "TypeScript, componentizacao em React e estrutura em Next.js para manter o front-end mais previsivel, reutilizavel e pronto para crescer.",
   },
   {
     title: "Do design ao deploy",
     description:
-      "Figma para direção visual, GitHub para versionamento e entregas publicadas em produção com Vercel.",
+      "Consigo atravessar o processo completo: referencia visual, construcao da interface, versionamento, publicacao e refinamento apos entrega.",
   },
 ] as const;
 
 export const differentiators = [
   {
-    title: "Estética com intenção",
+    title: "Estetica que comunica nivel",
     description:
-      "Minimalismo para mim não é vazio. Eu uso contraste, ritmo, espaço e objetos visuais para criar presença sem perder clareza.",
+      "Eu uso minimalismo para criar presenca, nao ausencia. O objetivo e fazer a interface parecer mais valiosa, mais clara e mais profissional.",
   },
   {
-    title: "Código orientado à experiência",
+    title: "Front-end pensado como produto",
     description:
-      "Penso no front-end como produto: hierarquia, fluidez, semântica, responsividade e performance precisam funcionar juntos.",
+      "Nao separo visual de engenharia. Hierarquia, fluidez, semantica, responsividade e performance fazem parte da mesma decisao.",
   },
   {
-    title: "Design e implementação no mesmo fluxo",
+    title: "Criterio visual e execucao no mesmo fluxo",
     description:
-      "Consigo sair da direção visual para o código mantendo consistência, refinamento de interface e estrutura mais limpa.",
+      "Consigo transformar direcao visual em interface funcional sem perder consistencia, refinamento e legibilidade no codigo.",
   },
 ] as const;
 
 export const interfacePrinciples = [
   "Hierarquia clara antes de efeito visual.",
-  "Animação para conduzir percepção, não para distrair.",
-  "Seções com profundidade, contraste e respiro.",
-  "Interface marcante sem perder usabilidade.",
+  "Animacao para conduzir percepcao, nao para distrair.",
+  "Secoes com profundidade, contraste e respiro real.",
+  "Interface memoravel sem sacrificar usabilidade.",
 ] as const;
 
 export const frontEndQualitySignals = [
-  "Responsividade pensada desde a composição inicial.",
-  "Semântica e estrutura para leitura mais clara do layout.",
-  "Componentização para evolução do projeto.",
-  "Atenção a performance, peso visual e ritmo de navegação.",
+  "Responsividade considerada desde a composicao inicial.",
+  "Semantica e estrutura para interfaces mais claras.",
+  "Componentizacao para evolucao tecnica do projeto.",
+  "Atencao a performance, peso visual e ritmo de navegacao.",
 ] as const;
 
 export const stackGroups = [
   {
     category: "Front-end",
     items: [
-      { name: "React", level: "Avançado" },
-      { name: "Next.js", level: "Avançado" },
-      { name: "TypeScript", level: "Avançado" },
-      { name: "JavaScript", level: "Avançado" },
-      { name: "Tailwind CSS", level: "Avançado" },
-      { name: "HTML & CSS", level: "Avançado" },
+      { name: "React", level: "Avancado" },
+      { name: "Next.js", level: "Avancado" },
+      { name: "TypeScript", level: "Avancado" },
+      { name: "JavaScript", level: "Avancado" },
+      { name: "Tailwind CSS", level: "Avancado" },
+      { name: "HTML & CSS", level: "Avancado" },
     ],
   },
   {
     category: "Back-end & dados",
     items: [
-      { name: "Node.js", level: "Intermediário" },
-      { name: "Prisma ORM", level: "Intermediário" },
-      { name: "MySQL", level: "Intermediário" },
-      { name: "APIs REST", level: "Intermediário" },
+      { name: "Node.js", level: "Intermediario" },
+      { name: "Prisma ORM", level: "Intermediario" },
+      { name: "MySQL", level: "Intermediario" },
+      { name: "APIs REST", level: "Intermediario" },
     ],
   },
   {
     category: "Ferramentas & processo",
     items: [
-      { name: "GitHub", level: "Avançado" },
-      { name: "Figma", level: "Intermediário" },
-      { name: "Vercel", level: "Intermediário" },
-      { name: "Web design", level: "Intermediário" },
+      { name: "GitHub", level: "Avancado" },
+      { name: "Figma", level: "Intermediario" },
+      { name: "Vercel", level: "Intermediario" },
+      { name: "Web design", level: "Intermediario" },
     ],
   },
 ] as const;
@@ -135,9 +136,9 @@ export const stackGroups = [
 export const projects = [
   {
     title: "Triply",
-    category: "Plataforma de viagens",
+    category: "Produto de viagens",
     description:
-      "Aplicação web para busca de voos e hotéis. Foco em UI/UX, performance e navegação fluida — um dos principais projetos do meu GitHub.",
+      "Projeto pensado para transformar uma busca de viagens em experiencia mais clara, organizada e visualmente mais forte que o padrao do segmento.",
     tech: ["React", "Next.js", "Tailwind CSS"],
     live: "https://triplyfly.vercel.app/",
     repo: "https://github.com/JefiiRamos/Triply",
@@ -146,9 +147,9 @@ export const projects = [
   },
   {
     title: "jefentregas-cwb",
-    category: "Produto web — entregas",
+    category: "Produto web - logistica local",
     description:
-      "Sistema publicado em produção para Curitiba, com TypeScript, interface responsiva e deploy ativo na Vercel.",
+      "Sistema publicado com foco em uso real, interface responsiva e estrutura tecnica consistente para operacao local.",
     tech: ["TypeScript", "Next.js", "Vercel"],
     live: "https://jefentregas-cwb.vercel.app",
     repo: "https://github.com/JefiiRamos/jefentregas-cwb",
@@ -157,9 +158,9 @@ export const projects = [
   },
   {
     title: "byLove",
-    category: "Experiência web",
+    category: "Experiencia visual",
     description:
-      "Projeto com deploy publicado, atenção a ritmo visual, tipografia e composição entre blocos de conteúdo.",
+      "Exploracao de ritmo visual, tipografia e composicao entre blocos para construir uma pagina com identidade mais autoral.",
     tech: ["CSS", "Layout", "Front-end"],
     live: "https://by-love.vercel.app",
     repo: "https://github.com/JefiiRamos/byLove",
@@ -170,7 +171,7 @@ export const projects = [
     title: "plann.er",
     category: "Planejamento",
     description:
-      "Aplicação em TypeScript com fluxos organizados e interface objetiva para uso recorrente.",
+      "Aplicacao com fluxo objetivo e estrutura organizada, pensada para uso recorrente e leitura rapida de interface.",
     tech: ["TypeScript", "React"],
     repo: "https://github.com/JefiiRamos/plann.er",
     featured: false,
@@ -178,9 +179,9 @@ export const projects = [
   },
   {
     title: "pass-in-web",
-    category: "Gestão web",
+    category: "Gestao web",
     description:
-      "Projeto TypeScript com estrutura para cadastros, listagens e rotinas de uso em ambiente web.",
+      "Projeto focado em cadastros, listagens e organizacao de fluxo em ambiente web, com base solida em TypeScript.",
     tech: ["TypeScript", "React"],
     repo: "https://github.com/JefiiRamos/pass-in-web",
     featured: false,
@@ -190,7 +191,7 @@ export const projects = [
     title: "crm-loop",
     category: "Painel / CRM",
     description:
-      "Interface funcional para rotinas de dados e acompanhamento, com base em TypeScript.",
+      "Painel com foco em rotinas de acompanhamento e dados, reforcando organizacao visual e legibilidade de informacao.",
     tech: ["TypeScript", "Painel", "Dados"],
     repo: "https://github.com/JefiiRamos/crm-loop",
     featured: false,
@@ -201,69 +202,69 @@ export const projects = [
 export const featuredCaseStudy = {
   project: "Triply",
   summary:
-    "Aplicação web para busca de voos e hotéis com foco em interface moderna, escaneabilidade e sensação visual mais premium.",
-  problemTitle: "Como evitar a interface carregada comum em produtos de viagem?",
+    "Uma aplicacao desenhada para mostrar como eu transformo uma interface comum em uma experiencia mais clara, desejavel e bem resolvida.",
+  problemTitle: "Como sair do visual carregado comum em produtos de viagem?",
   problem:
-    "Plataformas desse tipo costumam concentrar muita informação, o que torna a navegação cansativa e reduz a percepção de qualidade do produto.",
-  solutionTitle: "Organizar fluxo e leitura com estrutura visual forte.",
+    "Esse tipo de produto costuma concentrar muita informacao, o que cansa a navegacao e reduz a percepcao de valor antes mesmo do usuario interagir.",
+  solutionTitle: "Reorganizar o fluxo com clareza, camadas e direcao visual.",
   solution:
-    "Usei React, Next.js e Tailwind CSS para construir uma interface mais limpa, com melhor hierarquia, recortes claros de conteúdo e navegação mais fluida.",
-  criteriaTitle: "O objetivo era unir presença visual com usabilidade.",
+    "Usei React, Next.js e Tailwind CSS para construir uma interface mais limpa, com hierarquia mais forte, recortes de conteudo melhor definidos e navegacao mais leve.",
+  criteriaTitle: "O objetivo era aumentar percepcao de qualidade sem perder usabilidade.",
   criteria:
-    "O projeto resume como penso front-end: composição, clareza, consistência e decisões que fazem a página parecer menos genérica e mais profissional.",
+    "Esse projeto resume meu raciocinio de front-end: composicao, clareza, consistencia, ritmo e decisoes que fazem um produto parecer menos generico e mais confiavel.",
   live: "https://triplyfly.vercel.app/",
   repo: "https://github.com/JefiiRamos/Triply",
 } as const;
 
 export const experience = [
   {
-    period: "Out 2025 — Fev 2026",
+    period: "Out 2025 - Fev 2026",
     title: "Desenvolvedor Web",
     company: "Solid Tech",
     type: "Profissional",
     description:
-      "Desenvolvimento de aplicações web com JavaScript e bibliotecas modernas. Interfaces responsivas, integração com MySQL via Prisma ORM, estruturação de APIs e projetos de presença digital e marketing.",
+      "Atuacao em aplicacoes web com JavaScript e bibliotecas modernas, criando interfaces responsivas, integrando dados com Prisma e MySQL e apoiando projetos voltados a presenca digital.",
     highlights: [
-      "Interfaces focadas no usuário",
-      "APIs e persistência com Prisma",
+      "Interfaces focadas no usuario",
+      "APIs e persistencia com Prisma",
       "Entregas para marketing digital",
     ],
   },
   {
-    period: "Jun 2024 — Jun 2025",
+    period: "Jun 2024 - Jun 2025",
     title: "Assistente Administrativo",
     company: "Copaves",
     type: "Profissional",
     description:
-      "Atendimento ao cliente, rotinas administrativas, organização documental e apoio a processos financeiros — experiência que reforçou comunicação e organização.",
+      "Atendimento ao cliente, rotinas administrativas, organizacao documental e apoio financeiro. Essa etapa fortaleceu comunicacao, responsabilidade e clareza operacional.",
     highlights: [
       "Atendimento e suporte",
-      "Organização documental",
+      "Organizacao documental",
       "Rotinas operacionais",
     ],
   },
   {
-    period: "2025 — atual",
+    period: "2025 - atual",
     title: "Engenharia de Software",
     company: "Universidade Positivo",
-    type: "Formação",
+    type: "Formacao",
     description:
-      "Graduação em andamento com aprofundamento em desenvolvimento web, fundamentos de software, arquitetura e evolução contínua da base técnica.",
+      "Graduacao em andamento com aprofundamento em desenvolvimento web, fundamentos de software, arquitetura e evolucao consistente da base tecnica.",
     highlights: [
       "Desenvolvimento web",
       "Fundamentos de software",
-      "Projetos acadêmicos",
+      "Projetos academicos",
     ],
   },
   {
-    period: "2021 — 2024",
-    title: "Técnico em Desenvolvimento de Sistemas",
-    company: "Colégio Cívico Militar Guido Arzua",
-    type: "Formação",
+    period: "2021 - 2024",
+    title: "Tecnico em Desenvolvimento de Sistemas",
+    company: "Colegio Civico Militar Guido Arzua",
+    type: "Formacao",
     description:
-      "Formação técnica com lógica de programação, back-end em JavaScript, computação gráfica, front-end, web design e banco de dados.",
+      "Formacao tecnica com logica de programacao, back-end em JavaScript, computacao grafica, front-end, web design e banco de dados.",
     highlights: [
-      "Lógica e algoritmos",
+      "Logica e algoritmos",
       "Front-end e web design",
       "Banco de dados",
     ],
@@ -271,7 +272,7 @@ export const experience = [
 ] as const;
 
 export const goals = [
-  "Aprofundar arquitetura front-end e performance",
-  "Evoluir no ecossistema React e Next.js",
-  "Contribuir em projetos reais com escala e impacto",
+  "Entrar em um time onde front-end seja tratado como parte do produto",
+  "Aprofundar arquitetura, performance e qualidade de interface",
+  "Contribuir em projetos reais com escala, criterio e impacto visual",
 ] as const;
