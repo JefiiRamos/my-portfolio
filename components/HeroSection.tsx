@@ -51,18 +51,14 @@ export async function HeroSection() {
 
         <aside className="hero__panel panel">
           <div className="hero__panel-top">
-            {githubUser?.avatar_url ? (
-              <Image
-                src={githubUser.avatar_url}
-                alt={`Foto de perfil de ${profile.name}`}
-                width={72}
-                height={72}
-                className="hero__avatar"
-                priority
-              />
-            ) : (
-              <div className="hero__avatar hero__avatar--fallback">JR</div>
-            )}
+            <Image
+              src="/jefao-icon.webp"
+              alt={`Figura em estilo Apple de ${profile.name}`}
+              width={112}
+              height={112}
+              className="hero__avatar hero__avatar--icon"
+              priority
+            />
             <div>
               <p className="hero__panel-name">{profile.fullName}</p>
               <p className="hero__panel-role">{profile.role}</p>

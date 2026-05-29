@@ -43,19 +43,13 @@ export async function GitHubSection() {
       <div className="github-layout">
         <article className="panel panel--accent github-profile">
           <div className="github-profile__header">
-            {user?.avatar_url ? (
-              <Image
-                src={user.avatar_url}
-                alt={`Avatar de ${profile.name}`}
-                width={80}
-                height={80}
-                className="github-profile__avatar"
-              />
-            ) : (
-              <div className="github-profile__avatar github-profile__avatar--fallback">
-                JR
-              </div>
-            )}
+            <Image
+              src="/jefao-icon.webp"
+              alt={`Figura em estilo Apple de ${profile.name}`}
+              width={112}
+              height={112}
+              className="github-profile__avatar github-profile__avatar--icon"
+            />
             <div>
               <p className="github-profile__handle">
                 @{user?.login ?? GITHUB_USERNAME}
