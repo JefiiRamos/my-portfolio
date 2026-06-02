@@ -37,7 +37,6 @@ const PRIORITY_REPOS = [
   "jefentregas-cwb",
   "plann.er",
   "pass-in-web",
-  "byLove",
   "laluhub",
   "crm-loop",
   "Momento-unico-web",
@@ -52,7 +51,6 @@ const REPO_DESCRIPTIONS: Record<Locale, Record<string, string>> = {
     "plann.er": "Planejador web com fluxo organizado e experiência objetiva.",
     "pass-in-web":
       "Projeto web com TypeScript voltado a fluxos de cadastro e gestão.",
-    byLove: "Experiência web publicada com atenção a layout e presença visual.",
     laluhub: "Hub web com estrutura modular e base em TypeScript.",
     "crm-loop": "Painel CRM com rotinas de dados e interface funcional.",
     "Momento-unico-web":
@@ -65,7 +63,6 @@ const REPO_DESCRIPTIONS: Record<Locale, Record<string, string>> = {
     "plann.er": "Web planner with an organized flow and objective experience.",
     "pass-in-web":
       "TypeScript web project focused on registration and management flows.",
-    byLove: "Published web experience with attention to layout and visual presence.",
     laluhub: "Web hub with modular structure and a TypeScript base.",
     "crm-loop": "CRM dashboard with data routines and functional interface.",
     "Momento-unico-web":

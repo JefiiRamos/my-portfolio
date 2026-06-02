@@ -169,17 +169,6 @@ const pt: Dictionary = {
           year: "2026",
         },
         {
-          title: "byLove",
-          category: "Experiência visual",
-          description:
-            "Exploração de ritmo visual, tipografia e composição entre blocos para construir uma página com identidade mais autoral.",
-          tech: ["CSS", "Layout", "Front-end"],
-          live: "https://by-love.vercel.app",
-          repo: "https://github.com/JefiiRamos/byLove",
-          featured: false,
-          year: "2025",
-        },
-        {
           title: "plann.er",
           category: "Planejamento",
           description:
@@ -613,17 +602,6 @@ const en: Dictionary = {
           repo: "https://github.com/JefiiRamos/jefentregas-cwb",
           featured: false,
           year: "2026",
-        },
-        {
-          title: "byLove",
-          category: "Visual experience",
-          description:
-            "Explores visual rhythm, typography, and block composition to build a page with a more personal identity.",
-          tech: ["CSS", "Layout", "Front-end"],
-          live: "https://by-love.vercel.app",
-          repo: "https://github.com/JefiiRamos/byLove",
-          featured: false,
-          year: "2025",
         },
         {
           title: "plann.er",
