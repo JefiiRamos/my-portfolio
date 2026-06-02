@@ -498,9 +498,9 @@ a {
   border-radius: 0;
   object-fit: contain;
   background: transparent;
-  box-shadow:
+  /* box-shadow:
     0 1.4rem 3rem rgba(0, 0, 0, 0.22),
-    0 0 2.5rem rgba(141, 214, 201, 0.08);
+    0 0 2.5rem rgba(141, 214, 201, 0.08); */
 }
 
 .hero__avatar--fallback {
