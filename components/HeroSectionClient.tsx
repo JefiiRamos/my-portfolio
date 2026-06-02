@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { useI18n } from "@/lib/i18n/context";
 import { profile } from "@/lib/profile";
 
@@ -8,12 +8,14 @@ type HeroSectionClientProps = {
   repoCount: number;
   githubYears: number;
   githubLogin: string;
+  avatarUrl: string | null;
 };
 
 export function HeroSectionClient({
   repoCount,
   githubYears,
   githubLogin,
+  avatarUrl,
 }: HeroSectionClientProps) {
   const { t } = useI18n();
 
@@ -61,12 +63,11 @@ export function HeroSectionClient({
 
         <aside className="hero__panel panel">
           <div className="hero__panel-top">
-            <Image
-              src="/jefao-icon.webp"
+            <ProfileAvatar
+              avatarUrl={avatarUrl}
               alt={t.hero.avatarAlt}
-              width={112}
-              height={112}
-              className="hero__avatar hero__avatar--icon"
+              size={112}
+              className="hero__avatar"
               priority
             />
             <div>

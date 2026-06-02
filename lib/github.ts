@@ -117,6 +117,15 @@ export function formatGitHubDate(value: string): string {
   }).format(new Date(value));
 }
 
+export function getGitHubAvatarUrl(
+  avatarUrl: string | null | undefined,
+  size = 224,
+): string | null {
+  if (!avatarUrl?.trim()) return null;
+  const separator = avatarUrl.includes("?") ? "&" : "?";
+  return `${avatarUrl}${separator}s=${size}`;
+}
+
 export function yearsOnGitHub(createdAt: string): number {
   const created = new Date(createdAt);
   const now = new Date();

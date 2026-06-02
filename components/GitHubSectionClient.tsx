@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { Section } from "@/components/Section";
 import {
   formatGitHubDate,
@@ -49,12 +49,11 @@ export function GitHubSectionClient({
       <div className="github-layout">
         <article className="panel panel--accent github-profile">
           <div className="github-profile__header">
-            <Image
-              src="/jefao-icon.webp"
+            <ProfileAvatar
+              avatarUrl={user?.avatar_url}
               alt={section.avatarAlt}
-              width={112}
-              height={112}
-              className="github-profile__avatar github-profile__avatar--icon"
+              size={112}
+              className="github-profile__avatar"
             />
             <div>
               <p className="github-profile__handle">

@@ -11,6 +11,7 @@ export async function HeroSection() {
       repoCount={repoCount}
       githubYears={githubYears}
       githubLogin={githubUser?.login ?? "JefiiRamos"}
+      avatarUrl={githubUser?.avatar_url ?? null}
     />
   );
 }
