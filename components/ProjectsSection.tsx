@@ -1,17 +1,22 @@
-import { projects } from "@/lib/profile";
+"use client";
+
 import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
 
 export function ProjectsSection() {
+  const { t } = useI18n();
+  const section = t.sections.projects;
+
   return (
     <Section
       id="projetos"
       number="04"
-      tag="Projetos"
-      title="Entregas reais publicadas no GitHub e em produção."
-      description="Seleção dos principais repositórios — com demos ao vivo quando disponíveis. A lista completa está na seção GitHub, atualizada pela API."
+      tag={section.tag}
+      title={section.title}
+      description={section.description}
     >
       <div className="projects-grid">
-        {projects.map((project) => (
+        {section.items.map((project) => (
           <article
             key={project.title}
             className={`panel project-card-v2${project.featured ? " project-card-v2--featured" : ""}`}
@@ -35,14 +40,14 @@ export function ProjectsSection() {
             </div>
 
             <div className="project-card-v2__links">
-              {"live" in project && project.live ? (
+              {project.live ? (
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
                   className="link-arrow"
                 >
-                  Ver demo
+                  {t.common.viewDemo}
                 </a>
               ) : null}
               <a
@@ -51,7 +56,7 @@ export function ProjectsSection() {
                 rel="noreferrer"
                 className="link-arrow"
               >
-                Repositório
+                {t.common.repository}
               </a>
             </div>
           </article>

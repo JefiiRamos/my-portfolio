@@ -1,3 +1,5 @@
+import type { Locale } from "@/lib/i18n/types";
+
 export const GITHUB_USERNAME = "JefiiRamos";
 
 export type GitHubUser = {
@@ -41,27 +43,43 @@ const PRIORITY_REPOS = [
   "Momento-unico-web",
 ];
 
-const REPO_DESCRIPTIONS: Record<string, string> = {
-  Triply:
-    "Plataforma web para busca de voos e hotéis, com foco em UI/UX e performance.",
-  "jefentregas-cwb":
-    "Aplicação de entregas com interface responsiva e deploy em produção.",
-  "plann.er": "Planejador web com fluxo organizado e experiência objetiva.",
-  "pass-in-web":
-    "Projeto web com TypeScript voltado a fluxos de cadastro e gestão.",
-  byLove: "Experiência web publicada com atenção a layout e presença visual.",
-  laluhub: "Hub web com estrutura modular e base em TypeScript.",
-  "crm-loop": "Painel CRM com rotinas de dados e interface funcional.",
-  "Momento-unico-web":
-    "Aplicação web para gestão de momentos e fluxos do produto.",
+const REPO_DESCRIPTIONS: Record<Locale, Record<string, string>> = {
+  pt: {
+    Triply:
+      "Plataforma web para busca de voos e hotéis, com foco em UI/UX e performance.",
+    "jefentregas-cwb":
+      "Aplicação de entregas com interface responsiva e deploy em produção.",
+    "plann.er": "Planejador web com fluxo organizado e experiência objetiva.",
+    "pass-in-web":
+      "Projeto web com TypeScript voltado a fluxos de cadastro e gestão.",
+    byLove: "Experiência web publicada com atenção a layout e presença visual.",
+    laluhub: "Hub web com estrutura modular e base em TypeScript.",
+    "crm-loop": "Painel CRM com rotinas de dados e interface funcional.",
+    "Momento-unico-web":
+      "Aplicação web para gestão de momentos e fluxos do produto.",
+  },
+  en: {
+    Triply: "Web platform for flight and hotel search, focused on UI/UX and performance.",
+    "jefentregas-cwb":
+      "Delivery application with responsive UI and production deployment.",
+    "plann.er": "Web planner with an organized flow and objective experience.",
+    "pass-in-web":
+      "TypeScript web project focused on registration and management flows.",
+    byLove: "Published web experience with attention to layout and visual presence.",
+    laluhub: "Web hub with modular structure and a TypeScript base.",
+    "crm-loop": "CRM dashboard with data routines and functional interface.",
+    "Momento-unico-web":
+      "Web application for managing moments and product flows.",
+  },
 };
 
-export function getRepoDescription(repo: GitHubRepo): string {
+export function getRepoDescription(repo: GitHubRepo, locale: Locale = "pt"): string {
   if (repo.description?.trim()) return repo.description.trim();
-  return (
-    REPO_DESCRIPTIONS[repo.name] ??
-    `Repositório público em ${repo.language ?? "desenvolvimento web"}.`
-  );
+  const fallback =
+    locale === "en"
+      ? `Public repository in ${repo.language ?? "web development"}.`
+      : `Repositório público em ${repo.language ?? "desenvolvimento web"}.`;
+  return REPO_DESCRIPTIONS[locale][repo.name] ?? fallback;
 }
 
 export function pickFeaturedRepos(repos: GitHubRepo[], limit = 8): GitHubRepo[] {

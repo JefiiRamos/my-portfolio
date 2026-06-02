@@ -1,17 +1,22 @@
-import { stackGroups } from "@/lib/profile";
+"use client";
+
 import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
 
 export function StackSection() {
+  const { t } = useI18n();
+  const section = t.sections.stack;
+
   return (
     <Section
       id="stack"
       number="03"
-      tag="Stack & ferramentas"
-      title="O que uso para construir produtos web completos."
-      description="Front-end como foco principal, com base sólida em back-end e dados para entregar features de ponta a ponta quando o projeto pede."
+      tag={section.tag}
+      title={section.title}
+      description={section.description}
     >
       <div className="stack-grid">
-        {stackGroups.map((group) => (
+        {section.groups.map((group) => (
           <article key={group.category} className="panel stack-group">
             <h3 className="stack-group__title">{group.category}</h3>
             <ul className="stack-group__list">

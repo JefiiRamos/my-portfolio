@@ -1,21 +1,26 @@
-﻿import { experience } from "@/lib/profile";
+﻿"use client";
+
 import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
 
 export function ExperienceSection() {
+  const { t } = useI18n();
+  const section = t.sections.experience;
+
   return (
     <Section
       id="trajetoria"
       number="07"
-      tag="Trajetoria"
-      title="Minha evolução combina base técnica, entrega real e disciplina de execução."
-      description="Cada etapa adicionou uma camada útil ao meu trabalho: comunicação, organização, visão de produto e prática em desenvolvimento web."
+      tag={section.tag}
+      title={section.title}
+      description={section.description}
     >
       <div className="timeline-v2">
-        {experience.map((item, index) => (
+        {section.items.map((item, index) => (
           <article key={`${item.period}-${item.title}`} className="timeline-v2__item">
             <div className="timeline-v2__rail" aria-hidden>
               <span className="timeline-v2__dot" />
-              {index < experience.length - 1 ? (
+              {index < section.items.length - 1 ? (
                 <span className="timeline-v2__line" />
               ) : null}
             </div>
@@ -24,7 +29,7 @@ export function ExperienceSection() {
               <div className="timeline-v2__meta">
                 <span className="timeline-v2__period">{item.period}</span>
                 <span
-                  className={`timeline-v2__type timeline-v2__type--${item.type === "Formação" ? "formação" : "profissional"}`}
+                  className={`timeline-v2__type timeline-v2__type--${item.typeKey}`}
                 >
                   {item.type}
                 </span>

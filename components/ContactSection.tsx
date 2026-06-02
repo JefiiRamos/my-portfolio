@@ -1,41 +1,47 @@
-﻿import { goals, profile } from "@/lib/profile";
-import { Section } from "@/components/Section";
+﻿"use client";
 
-const contactMethods = [
-  {
-    label: "E-mail",
-    value: profile.email,
-    href: `mailto:${profile.email}`,
-    description: "Canal ideal para proposta, entrevista ou convite",
-  },
-  {
-    label: "Telefone / WhatsApp",
-    value: profile.phoneDisplay,
-    href: `https://wa.me/${profile.phone.replace(/\D/g, "")}`,
-    description: "Resposta rápida para conversas objetivas",
-  },
-  {
-    label: "LinkedIn",
-    value: "jeferson-ramos",
-    href: profile.links.linkedin,
-    description: "Perfil profissional e contexto de carreira",
-  },
-  {
-    label: "Instagram",
-    value: "@_jefiibss",
-    href: profile.links.instagram,
-    description: "Contato mais informal, se fizer sentido",
-  },
-];
+import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
+import { profile } from "@/lib/profile";
 
 export function ContactSection() {
+  const { t } = useI18n();
+  const section = t.sections.contact;
+
+  const contactMethods = [
+    {
+      label: section.methods[0].label,
+      value: profile.email,
+      href: `mailto:${profile.email}`,
+      description: section.methods[0].description,
+    },
+    {
+      label: section.methods[1].label,
+      value: profile.phoneDisplay,
+      href: `https://wa.me/${profile.phone.replace(/\D/g, "")}`,
+      description: section.methods[1].description,
+    },
+    {
+      label: section.methods[2].label,
+      value: profile.linkedinHandle,
+      href: profile.links.linkedin,
+      description: section.methods[2].description,
+    },
+    {
+      label: section.methods[3].label,
+      value: profile.instagramHandle,
+      href: profile.links.instagram,
+      description: section.methods[3].description,
+    },
+  ];
+
   return (
     <Section
       id="contato"
       number="09"
-      tag="Contato"
-      title="Se o objetivo for construir um front-end mais forte, eu quero participar."
-      description={profile.availability}
+      tag={section.tag}
+      title={section.title}
+      description={t.profile.availability}
     >
       <div className="contact-grid">
         <div className="contact-methods">
@@ -55,15 +61,15 @@ export function ContactSection() {
         </div>
 
         <article className="panel panel--accent contact-cta">
-          <p className="contact-cta__tag">O que procuro agora</p>
+          <p className="contact-cta__tag">{section.lookingFor}</p>
           <ul className="contact-cta__goals">
-            {goals.map((goal) => (
+            {t.sections.github.goals.map((goal) => (
               <li key={goal}>{goal}</li>
             ))}
           </ul>
           <div className="contact-cta__actions">
             <a className="button-primary" href={`mailto:${profile.email}`}>
-              Falar por e-mail
+              {section.sendEmail}
             </a>
             <a
               className="button-secondary"
@@ -71,7 +77,7 @@ export function ContactSection() {
               target="_blank"
               rel="noreferrer"
             >
-              Revisar meu GitHub
+              {section.reviewGithub}
             </a>
           </div>
         </article>

@@ -1,35 +1,29 @@
-import { facts, pillars, profile } from "@/lib/profile";
+"use client";
+
 import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
 
 export function AboutSection() {
+  const { t } = useI18n();
+  const about = t.sections.about;
+
   return (
     <Section
       id="sobre"
       number="01"
-      tag="Sobre mim"
-      title="Tecnologia com olhar de produto e cuidado visual."
-      description="Do ensino técnico à engenharia, construí uma base que une front-end, back-end e organização — com foco em interfaces que comunicam bem e funcionam de verdade."
+      tag={about.tag}
+      title={about.title}
+      description={about.description}
     >
       <div className="about-grid">
         <article className="panel panel--accent about-intro">
-          <p className="about-intro__label">Quem sou</p>
-          <p className="about-intro__text">
-            Sou <strong>{profile.fullName}</strong>, {profile.role.toLowerCase()}{" "}
-            em {profile.location.split("—")[0].trim()}. Estudo Engenharia de
-            Software na Universidade Positivo e venho do técnico em
-            Desenvolvimento de Sistemas, onde aprendi lógica, web design, banco
-            de dados e a base do que aplico hoje em React e Next.js.
-          </p>
-          <p className="about-intro__text">
-            No GitHub publico projetos reais — do protótipo ao deploy. Na Solid
-            Tech trabalhei com interfaces responsivas, Prisma ORM, MySQL e APIs.
-            Busco oportunidade como desenvolvedor front-end ou estágio em times
-            que valorizem interface, performance e evolução contínua.
-          </p>
+          <p className="about-intro__label">{about.whoAmI}</p>
+          <p className="about-intro__text">{about.intro1}</p>
+          <p className="about-intro__text">{about.intro2}</p>
         </article>
 
         <div className="about-facts">
-          {facts.map((fact) => (
+          {t.facts.map((fact) => (
             <article key={fact.label} className="panel fact-card">
               <p className="fact-card__label">{fact.label}</p>
               <p className="fact-card__value">{fact.value}</p>
@@ -39,7 +33,7 @@ export function AboutSection() {
         </div>
 
         <div className="about-pillars">
-          {pillars.map((pillar, index) => (
+          {t.pillars.map((pillar, index) => (
             <article key={pillar.title} className="panel pillar-card">
               <span className="pillar-card__index">
                 {String(index + 1).padStart(2, "0")}

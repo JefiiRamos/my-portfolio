@@ -1,22 +1,23 @@
-﻿import { Section } from "@/components/Section";
-import {
-  differentiators,
-  frontEndQualitySignals,
-  interfacePrinciples,
-} from "@/lib/profile";
+﻿"use client";
+
+import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
 
 export function DifferentialsSection() {
+  const { t } = useI18n();
+  const section = t.sections.differentials;
+
   return (
     <Section
       id="diferenciais"
       number="02"
-      tag="Diferenciais"
-      title="Não basta deixar bonito. Eu quero deixar convincente, utilizável e técnicamente sólido."
-      description="Esta seção responde o que realmente pesa em recrutamento: como penso, como executo e por que meu front-end agrega além da estética."
+      tag={section.tag}
+      title={section.title}
+      description={section.description}
     >
       <div className="differentials-layout">
         <div className="differentials-grid">
-          {differentiators.map((item, index) => (
+          {section.items.map((item, index) => (
             <article key={item.title} className="panel differential-card">
               <span className="differential-card__index">
                 {String(index + 1).padStart(2, "0")}
@@ -29,18 +30,18 @@ export function DifferentialsSection() {
 
         <div className="differentials-side">
           <article className="panel panel--accent principles-card">
-            <p className="principles-card__label">Princípios de interface</p>
+            <p className="principles-card__label">{section.principlesLabel}</p>
             <ul className="principles-card__list">
-              {interfacePrinciples.map((item) => (
+              {section.principles.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
 
           <article className="panel quality-card-v2">
-            <p className="quality-card-v2__label">O que meu front-end precisa sustentar</p>
+            <p className="quality-card-v2__label">{section.qualityLabel}</p>
             <div className="quality-card-v2__grid">
-              {frontEndQualitySignals.map((item) => (
+              {section.qualitySignals.map((item) => (
                 <div key={item} className="quality-card-v2__item">
                   <span className="quality-card-v2__dot" aria-hidden />
                   <p>{item}</p>

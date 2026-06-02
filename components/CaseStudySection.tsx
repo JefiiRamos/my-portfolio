@@ -1,56 +1,62 @@
-﻿import { Section } from "@/components/Section";
-import { featuredCaseStudy } from "@/lib/profile";
+﻿"use client";
+
+import { Section } from "@/components/Section";
+import { useI18n } from "@/lib/i18n/context";
+import { profile } from "@/lib/profile";
 
 export function CaseStudySection() {
+  const { t } = useI18n();
+  const section = t.sections.caseStudy;
+
   return (
     <Section
       id="case"
       number="06"
-      tag="Case em foco"
-      title="Projeto, para mim, também é argumento. Ele precisa provar leitura de produto, decisão visual e execução."
-      description="Em vez de só exibir stack, este bloco mostra como raciocino quando uma interface precisa parecer melhor e funcionar melhor."
+      tag={section.tag}
+      title={section.title}
+      description={section.description}
     >
       <div className="case-study-grid">
         <article className="panel panel--accent case-study-card case-study-card--intro">
-          <p className="case-study-card__label">Projeto</p>
-          <h3 className="case-study-card__title">{featuredCaseStudy.project}</h3>
-          <p className="case-study-card__text">{featuredCaseStudy.summary}</p>
+          <p className="case-study-card__label">{section.projectLabel}</p>
+          <h3 className="case-study-card__title">{section.project}</h3>
+          <p className="case-study-card__text">{section.summary}</p>
           <div className="project-card-v2__links">
             <a
-              href={featuredCaseStudy.live}
+              href={profile.caseStudyLinks.live}
               target="_blank"
               rel="noreferrer"
               className="link-arrow"
             >
-              Ver demo
+              {t.common.viewDemo}
             </a>
             <a
-              href={featuredCaseStudy.repo}
+              href={profile.caseStudyLinks.repo}
               target="_blank"
               rel="noreferrer"
               className="link-arrow"
             >
-              Repositório
+              {t.common.repository}
             </a>
           </div>
         </article>
 
         <article className="panel case-study-card">
-          <p className="case-study-card__label">Problema</p>
-          <h3 className="case-study-card__title">{featuredCaseStudy.problemTitle}</h3>
-          <p className="case-study-card__text">{featuredCaseStudy.problem}</p>
+          <p className="case-study-card__label">{section.problemLabel}</p>
+          <h3 className="case-study-card__title">{section.problemTitle}</h3>
+          <p className="case-study-card__text">{section.problem}</p>
         </article>
 
         <article className="panel case-study-card">
-          <p className="case-study-card__label">Solução</p>
-          <h3 className="case-study-card__title">{featuredCaseStudy.solutionTitle}</h3>
-          <p className="case-study-card__text">{featuredCaseStudy.solution}</p>
+          <p className="case-study-card__label">{section.solutionLabel}</p>
+          <h3 className="case-study-card__title">{section.solutionTitle}</h3>
+          <p className="case-study-card__text">{section.solution}</p>
         </article>
 
         <article className="panel case-study-card">
-          <p className="case-study-card__label">Criterios</p>
-          <h3 className="case-study-card__title">{featuredCaseStudy.criteriaTitle}</h3>
-          <p className="case-study-card__text">{featuredCaseStudy.criteria}</p>
+          <p className="case-study-card__label">{section.criteriaLabel}</p>
+          <h3 className="case-study-card__title">{section.criteriaTitle}</h3>
+          <p className="case-study-card__text">{section.criteria}</p>
         </article>
       </div>
     </Section>

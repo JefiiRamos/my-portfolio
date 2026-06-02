@@ -1,59 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import { Section } from "@/components/Section";
-
-const visualProjects = [
-  {
-    name: "Triply",
-    eyebrow: "Produto de viagens",
-    thesis:
-      "Interface com foco em desejo, clareza de leitura e sensacao de produto premium.",
-    shots: [
-      {
-        src: "/triply-1.png",
-        alt: "Tela principal do projeto Triply",
-        label: "Primeira impressao",
-      },
-      {
-        src: "/triply-2.png",
-        alt: "Tela interna do projeto Triply",
-        label: "Fluxo visual",
-      },
-    ],
-    notes: ["Hero com presenca", "Hierarquia limpa", "Ritmo editorial"],
-  },
-  {
-    name: "Jef Entregas",
-    eyebrow: "Logistica local",
-    thesis:
-      "Experiencia objetiva para serviço real, com leitura rápida e chamada de ação direta.",
-    shots: [
-      {
-        src: "/jef-entregas-1.png",
-        alt: "Tela principal do projeto Jef Entregas",
-        label: "Oferta clara",
-      },
-      {
-        src: "/jef-entregas-2.png",
-        alt: "Tela de detalhe do projeto Jef Entregas",
-        label: "Conversao",
-      },
-    ],
-    notes: ["Serviço evidente", "Layout responsivo", "Contato sem atrito"],
-  },
-] as const;
+import { useI18n } from "@/lib/i18n/context";
 
 export function VisualShowcaseSection() {
+  const { t } = useI18n();
+  const section = t.sections.prints;
+
   return (
     <Section
       id="prints"
       number="05"
-      tag="Prints de interface"
-      title="Não mostro so o código. Mostro a percepção visual que ele entrega."
-      description="Esses recortes funcionam como evidência de front-end: composição, hierarquia, contraste e intenção aplicados em projetos publicados."
+      tag={section.tag}
+      title={section.title}
+      description={section.description}
       className="visual-showcase-section"
     >
       <div className="visual-showcase">
-        {visualProjects.map((project, projectIndex) => (
+        {section.projects.map((project, projectIndex) => (
           <article
             key={project.name}
             className={`visual-case visual-case--${projectIndex + 1}`}
@@ -62,7 +27,10 @@ export function VisualShowcaseSection() {
               <p className="visual-case__eyebrow">{project.eyebrow}</p>
               <h3 className="visual-case__title">{project.name}</h3>
               <p className="visual-case__thesis">{project.thesis}</p>
-              <div className="visual-case__notes" aria-label="Decisoes visuais">
+              <div
+                className="visual-case__notes"
+                aria-label={section.visualDecisions}
+              >
                 {project.notes.map((note) => (
                   <span key={note}>{note}</span>
                 ))}

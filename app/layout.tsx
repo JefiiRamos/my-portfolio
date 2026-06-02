@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Space_Grotesk } from "next/font/google";
+import { LanguageProvider } from "@/lib/i18n/context";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -28,8 +29,11 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       className={`${spaceGrotesk.variable} ${cormorant.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
