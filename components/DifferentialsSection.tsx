@@ -11,8 +11,8 @@ export function DifferentialsSection() {
       id="diferenciais"
       number="02"
       tag="Diferenciais"
-      title="Nao basta deixar bonito. Eu quero deixar convincente, utilizavel e tecnicamente solido."
-      description="Esta secao responde o que realmente pesa em recrutamento: como penso, como executo e por que meu front-end agrega alem da estetica."
+      title="Não basta deixar bonito. Eu quero deixar convincente, utilizável e técnicamente sólido."
+      description="Esta seção responde o que realmente pesa em recrutamento: como penso, como executo e por que meu front-end agrega além da estética."
     >
       <div className="differentials-layout">
         <div className="differentials-grid">
@@ -29,7 +29,7 @@ export function DifferentialsSection() {
 
         <div className="differentials-side">
           <article className="panel panel--accent principles-card">
-            <p className="principles-card__label">Principios de interface</p>
+            <p className="principles-card__label">Princípios de interface</p>
             <ul className="principles-card__list">
               {interfacePrinciples.map((item) => (
                 <li key={item}>{item}</li>

@@ -7,8 +7,8 @@ export function CaseStudySection() {
       id="case"
       number="06"
       tag="Case em foco"
-      title="Projeto, para mim, tambem e argumento. Ele precisa provar leitura de produto, decisao visual e execucao."
-      description="Em vez de so exibir stack, este bloco mostra como raciocino quando uma interface precisa parecer melhor e funcionar melhor."
+      title="Projeto, para mim, também é argumento. Ele precisa provar leitura de produto, decisão visual e execução."
+      description="Em vez de só exibir stack, este bloco mostra como raciocino quando uma interface precisa parecer melhor e funcionar melhor."
     >
       <div className="case-study-grid">
         <article className="panel panel--accent case-study-card case-study-card--intro">
@@ -30,7 +30,7 @@ export function CaseStudySection() {
               rel="noreferrer"
               className="link-arrow"
             >
-              Repositorio
+              Repositório
             </a>
           </div>
         </article>
@@ -42,7 +42,7 @@ export function CaseStudySection() {
         </article>
 
         <article className="panel case-study-card">
-          <p className="case-study-card__label">Solucao</p>
+          <p className="case-study-card__label">Solução</p>
           <h3 className="case-study-card__title">{featuredCaseStudy.solutionTitle}</h3>
           <p className="case-study-card__text">{featuredCaseStudy.solution}</p>
         </article>

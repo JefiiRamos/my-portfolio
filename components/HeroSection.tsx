@@ -71,24 +71,24 @@ export async function HeroSection() {
           <div className="hero__stats">
             <div className="hero__stat">
               <span className="hero__stat-value">{repoCount}</span>
-              <span className="hero__stat-label">repositorios publicos</span>
+              <span className="hero__stat-label">Repositórios públicos</span>
             </div>
             <div className="hero__stat">
               <span className="hero__stat-value">{githubYears}+</span>
-              <span className="hero__stat-label">anos de pratica continua</span>
+              <span className="hero__stat-label">Anos de prática contínua</span>
             </div>
             <div className="hero__stat">
               <span className="hero__stat-value">2</span>
-              <span className="hero__stat-label">frentes com entrega real</span>
+              <span className="hero__stat-label">Frentes com entrega real</span>
             </div>
           </div>
 
           <div className="hero__panel-divider" />
 
           <ul className="hero__highlights">
-            <li>Solid Tech - interface, integracao e base full stack</li>
+            <li>Solid Tech - interface, integração e base full stack</li>
             <li>Universidade Positivo - Engenharia de Software</li>
-            <li>Projetos publicados, ritmo constante e construcao visivel</li>
+            <li>Projetos publicados, ritmo constante e construção visível</li>
           </ul>
         </aside>
       </div>

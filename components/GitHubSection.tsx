@@ -37,8 +37,8 @@ export async function GitHubSection() {
       id="github"
       number="08"
       tag="GitHub"
-      title="Meu GitHub funciona como historico publico de consistencia, estudo e entrega."
-      description={`Perfil @${GITHUB_USERNAME} com repositorios atualizados automaticamente para mostrar evolucao continua, nao so vitrine.`}
+      title="Meu GitHub funciona como histórico público de consistência, estudo e entrega."
+      description={`Perfil @${GITHUB_USERNAME} com repositórios atualizados automaticamente para mostrar evolução contínua, não só vitrine.`}
     >
       <div className="github-layout">
         <article className="panel panel--accent github-profile">
@@ -111,10 +111,10 @@ export async function GitHubSection() {
           <p className="github-readme__tag">Leitura de perfil</p>
           <ul className="github-readme__list">
             <li>Front-end com foco em React, Next.js e direcao visual</li>
-            <li>Formacao em Engenharia de Software com base tecnica previa</li>
-            <li>Projetos publicados que mostram pratica alem de teoria</li>
+            <li>Formação em Engenharia de Software com base técnica previa</li>
+            <li>Projetos publicados que mostram prática além de teoria</li>
             <li>Vivencia full stack suficiente para dialogar com dados e APIs</li>
-            <li>Historico publico de construcao continua e experimentacao</li>
+            <li>Histórico público de construção contínua e experimentação</li>
           </ul>
           <div className="github-readme__goals">
             <p className="github-readme__goals-title">Metas</p>
@@ -129,7 +129,7 @@ export async function GitHubSection() {
 
       {featuredRepos.length > 0 ? (
         <div className="github-repos">
-          <p className="github-repos__label">Repositorios em destaque</p>
+          <p className="github-repos__label">Repositórios em destaque</p>
           <div className="github-repos__grid">
             {featuredRepos.map((repo) => (
               <article key={repo.id} className="panel repo-card-v2">

@@ -12,7 +12,7 @@ const contactMethods = [
     label: "Telefone / WhatsApp",
     value: profile.phoneDisplay,
     href: `https://wa.me/${profile.phone.replace(/\D/g, "")}`,
-    description: "Resposta rapida para conversas objetivas",
+    description: "Resposta rápida para conversas objetivas",
   },
   {
     label: "LinkedIn",

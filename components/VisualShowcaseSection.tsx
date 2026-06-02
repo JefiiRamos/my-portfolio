@@ -25,7 +25,7 @@ const visualProjects = [
     name: "Jef Entregas",
     eyebrow: "Logistica local",
     thesis:
-      "Experiencia objetiva para servico real, com leitura rapida e chamada de acao direta.",
+      "Experiencia objetiva para serviço real, com leitura rápida e chamada de ação direta.",
     shots: [
       {
         src: "/jef-entregas-1.png",
@@ -38,7 +38,7 @@ const visualProjects = [
         label: "Conversao",
       },
     ],
-    notes: ["Servico evidente", "Layout responsivo", "Contato sem atrito"],
+    notes: ["Serviço evidente", "Layout responsivo", "Contato sem atrito"],
   },
 ] as const;
 
@@ -48,8 +48,8 @@ export function VisualShowcaseSection() {
       id="prints"
       number="05"
       tag="Prints de interface"
-      title="Nao mostro so o codigo. Mostro a percepcao visual que ele entrega."
-      description="Esses recortes funcionam como evidencia de front-end: composicao, hierarquia, contraste e intencao aplicados em projetos publicados."
+      title="Não mostro so o código. Mostro a percepção visual que ele entrega."
+      description="Esses recortes funcionam como evidência de front-end: composição, hierarquia, contraste e intenção aplicados em projetos publicados."
       className="visual-showcase-section"
     >
       <div className="visual-showcase">
