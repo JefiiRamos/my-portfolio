@@ -10,42 +10,65 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a href="#" className="site-logo">
-          <span className="site-logo__mark" aria-hidden />
-          <span>
-            <span className="site-logo__name">{t.profile.name}</span>
-            <span className="site-logo__role">{t.profile.role}</span>
-          </span>
-        </a>
 
-        <nav className="site-nav site-nav--desktop" aria-label="Principal">
-          {t.nav.map((item) => (
-            <a key={item.href} href={item.href} className="site-nav__link">
-              {item.label}
+        <div className="site-header__branding">
+          <a href="#" className="site-logo">
+            <div className="site-logo__indicator" />
+
+            <div className="site-logo__content">
+              <span className="site-logo__system">
+                [ JR_SYSTEM ]
+              </span>
+
+              <span className="site-logo__name">
+                {t.profile.name}
+              </span>
+
+              <span className="site-logo__role">
+                {t.profile.role}
+              </span>
+            </div>
+          </a>
+
+          {/* <div className="site-header__status">
+            <span className="site-header__status-dot" />
+            AVAILABLE FOR WORK
+          </div> */}
+        </div>
+
+        <nav className="site-nav" aria-label="Principal">
+          {t.nav.map((item, index) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="site-nav__link"
+            >
+              <span className="site-nav__index">
+                0{index + 1}
+              </span>
+
+              <span className="site-nav__label">
+                {item.label}
+              </span>
             </a>
           ))}
         </nav>
 
         <div className="site-header__actions">
           <LanguageSwitcher />
+
           <a
             href={profile.links.github}
             target="_blank"
             rel="noreferrer"
-            className="site-header__cta button-primary button-primary--compact"
+            className="site-header__github"
           >
-            {t.common.github}
+            GITHUB
           </a>
         </div>
-      </div>
 
-      <nav className="site-nav-mobile" aria-label="Mobile">
-        {t.nav.map((item) => (
-          <a key={item.href} href={item.href} className="site-nav-mobile__link">
-            {item.label}
-          </a>
-        ))}
-      </nav>
+      </div>
     </header>
   );
 }
+

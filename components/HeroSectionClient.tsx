@@ -21,86 +21,151 @@ export function HeroSectionClient({
 
   return (
     <section className="hero">
-      <div className="hero__grid">
-        <div className="hero__intro">
-          <div className="hero__badge">
-            <span className="hero__badge-dot" aria-hidden />
-            <span>{t.profile.availability}</span>
-            <span className="hero__badge-sep" aria-hidden>
-              ·
-            </span>
-            <span>{t.profile.location}</span>
+
+      <div className="hero__grid-bg" />
+
+      <div className="hero__content">
+
+        <div className="hero__left">
+
+          <div className="hero__system">
+            <span className="hero__system-line" />
+            FRONTEND ENGINEER / CREATIVE DEVELOPER
           </div>
 
-          <p className="hero__eyebrow font-serif">{t.profile.tagline}</p>
+          <div className="hero__availability">
+            <span className="hero__availability-dot" />
+            AVAILABLE FOR WORK
+          </div>
 
-          <h1 className="hero__title">{t.profile.headline}</h1>
+          <h1 className="hero__title">
+            Building
+            <br />
+            digital
+            <br />
+            systems.
+          </h1>
 
-          <p className="hero__bio">{t.profile.bio}</p>
+          <p className="hero__description">
+            {t.profile.bio}
+          </p>
 
           <div className="hero__actions">
             <a
-              className="button-primary"
-              href={profile.links.linkedin}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t.hero.linkedin}
-            </a>
-            <a
-              className="button-secondary"
               href={profile.links.github}
               target="_blank"
               rel="noreferrer"
+              className="hero__button hero__button--primary"
             >
-              {t.hero.exploreGithub}
+              GITHUB
             </a>
-            <a className="button-ghost" href="#contato">
-              {t.hero.contactCta}
+
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="hero__button hero__button--secondary"
+            >
+              LINKEDIN
             </a>
           </div>
+
         </div>
 
-        <aside className="hero__panel panel">
-          <div className="hero__panel-top">
+        <div className="hero__right">
+
+          <div className="hero-terminal">
+
+            <div className="hero-terminal__topbar">
+              <span />
+              <span />
+              <span />
+            </div>
+
+            <div className="hero-terminal__content">
+
+              <div className="hero-terminal__line">
+                <span className="hero-terminal__prompt">
+                  $
+                </span>
+
+                <span>
+                  whoami
+                </span>
+              </div>
+
+              <div className="hero-terminal__result">
+                {t.profile.fullName}
+              </div>
+
+              <div className="hero-terminal__line">
+                <span className="hero-terminal__prompt">
+                  $
+                </span>
+
+                <span>
+                  current_stack
+                </span>
+              </div>
+
+              <div className="hero-terminal__result">
+                Next.js / React / TypeScript
+              </div>
+
+              <div className="hero-terminal__line">
+                <span className="hero-terminal__prompt">
+                  $
+                </span>
+
+                <span>
+                  github_stats
+                </span>
+              </div>
+
+              <div className="hero-terminal__result">
+                {repoCount}+ repositories
+              </div>
+
+              <div className="hero-terminal__result">
+                {githubYears}+ years coding
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="hero-card">
+
             <ProfileAvatar
               avatarUrl={avatarUrl}
               alt={t.hero.avatarAlt}
-              size={112}
-              className="hero__avatar"
+              size={92}
+              className="hero-card__avatar"
               priority
             />
-            <div>
-              <p className="hero__panel-name">{t.profile.fullName}</p>
-              <p className="hero__panel-role">{t.profile.role}</p>
-              <p className="hero__panel-handle">@{githubLogin}</p>
+
+            <div className="hero-card__content">
+
+              <span className="hero-card__label">
+                SYSTEM USER
+              </span>
+
+              <h3 className="hero-card__name">
+                @{githubLogin}
+              </h3>
+
+              <p className="hero-card__role">
+                {t.profile.role}
+              </p>
+
             </div>
+
           </div>
 
-          <div className="hero__stats">
-            <div className="hero__stat">
-              <span className="hero__stat-value">{repoCount}</span>
-              <span className="hero__stat-label">{t.hero.publicRepos}</span>
-            </div>
-            <div className="hero__stat">
-              <span className="hero__stat-value">{githubYears}+</span>
-              <span className="hero__stat-label">{t.hero.yearsPractice}</span>
-            </div>
-            <div className="hero__stat">
-              <span className="hero__stat-value">2</span>
-              <span className="hero__stat-label">{t.hero.realDelivery}</span>
-            </div>
-          </div>
+        </div>
 
-          <div className="hero__panel-divider" />
-
-          <ul className="hero__highlights">
-            {t.hero.highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </aside>
       </div>
+
     </section>
   );
 }

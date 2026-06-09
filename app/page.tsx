@@ -1,4 +1,3 @@
-import { AmbientOrbs } from "@/components/AmbientOrbs";
 import { AboutSection } from "@/components/AboutSection";
 import { CaseStudySection } from "@/components/CaseStudySection";
 import { ContactSection } from "@/components/ContactSection";
@@ -15,7 +14,6 @@ import { VisualShowcaseSection } from "@/components/VisualShowcaseSection";
 export default function Home() {
   return (
     <>
-      <AmbientOrbs />
       <Header />
 
       <main className="site-main">
