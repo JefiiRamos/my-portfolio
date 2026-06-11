@@ -12,37 +12,115 @@ export function AboutSection() {
       id="sobre"
       number="01"
       tag={about.tag}
-      title={about.title}
-      description={about.description}
+      title="Building Digital Experiences"
+      description="Frontend development focused on performance, usability and modern interfaces."
     >
-      <div className="about-grid">
-        <article className="panel panel--accent about-intro">
-          <p className="about-intro__label">{about.whoAmI}</p>
-          <p className="about-intro__text">{about.intro1}</p>
-          <p className="about-intro__text">{about.intro2}</p>
-        </article>
+      <div className="about-v4">
 
-        <div className="about-facts">
-          {t.facts.map((fact) => (
-            <article key={fact.label} className="panel fact-card">
-              <p className="fact-card__label">{fact.label}</p>
-              <p className="fact-card__value">{fact.value}</p>
-              <p className="fact-card__detail">{fact.detail}</p>
-            </article>
-          ))}
+        <div className="about-v4__headline">
+          <span>Frontend Developer</span>
+
+          <div className="about-v4__line" />
         </div>
 
-        <div className="about-pillars">
-          {t.pillars.map((pillar, index) => (
-            <article key={pillar.title} className="panel pillar-card">
-              <span className="pillar-card__index">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="pillar-card__title">{pillar.title}</h3>
-              <p className="pillar-card__text">{pillar.description}</p>
-            </article>
-          ))}
+        <div className="about-v4__metrics">
+
+          <article className="about-metric">
+            <span className="about-metric__number">
+              03+
+            </span>
+
+            <span className="about-metric__label">
+              Years Learning
+            </span>
+          </article>
+
+          <article className="about-metric">
+            <span className="about-metric__number">
+              UI
+            </span>
+
+            <span className="about-metric__label">
+              Interface Design
+            </span>
+          </article>
+
+          <article className="about-metric">
+            <span className="about-metric__number">
+              UX
+            </span>
+
+            <span className="about-metric__label">
+              User Experience
+            </span>
+          </article>
+
         </div>
+
+        <div className="about-v4__stack">
+
+          <span>React</span>
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>JavaScript</span>
+          <span>Responsive</span>
+          <span>Git</span>
+
+        </div>
+
+        <div className="about-v4__statement">
+
+          Building interfaces focused on clarity,
+          performance and usability.
+
+        </div>
+
+        <div className="about-v4__grid">
+
+          <div className="about-v4__card">
+            <span className="about-v4__card-number">
+              01
+            </span>
+
+            <h3>
+              Interface
+            </h3>
+
+            <p>
+              Minimal and modern visual systems with strong hierarchy.
+            </p>
+          </div>
+
+          <div className="about-v4__card">
+            <span className="about-v4__card-number">
+              02
+            </span>
+
+            <h3>
+              Performance
+            </h3>
+
+            <p>
+              Fast experiences focused on responsiveness and fluidity.
+            </p>
+          </div>
+
+          <div className="about-v4__card">
+            <span className="about-v4__card-number">
+              03
+            </span>
+
+            <h3>
+              Frontend
+            </h3>
+
+            <p>
+              React and Next.js applications with scalable architecture.
+            </p>
+          </div>
+
+        </div>
+
       </div>
     </Section>
   );
