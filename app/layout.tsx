@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import { LanguageProvider } from "@/lib/i18n/context";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const spaceGrotesk = localFont({
+  src: "./fonts/space-grotesk-latin.woff2",
   variable: "--font-space-grotesk",
-  subsets: ["latin"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  weight: "300 700",
 });
 
 export const metadata: Metadata = {
-  title: "Jeferson Ramos | Front-end Developer",
+  title: "Jefii — Jeferson Ramos | Código com intenção",
   description:
-    "Portfólio de Jeferson Ramos — desenvolvedor front-end em Curitiba. React, Next.js, TypeScript. Projetos reais no GitHub, experiência na Solid Tech e formação em Engenharia de Software.",
+    "Código com intenção. Interface com personalidade. Conheça os projetos de Jeferson Ramos, o Jefii: desenvolvedor front-end em Curitiba, com foco em React, Next.js e experiências digitais.",
+  icons: { icon: "/icon.svg", apple: "/icon.svg" },
+  openGraph: {
+    title: "Jefii — Código com intenção. Interface com personalidade.",
+    description: "O espaço criativo de Jeferson Ramos. Projetos reais, olhar de produto e cuidado com os detalhes.",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${spaceGrotesk.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">

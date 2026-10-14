@@ -1,35 +1,7 @@
-import { AboutSection } from "@/components/AboutSection";
-import { CaseStudySection } from "@/components/CaseStudySection";
-import { ContactSection } from "@/components/ContactSection";
-import { DifferentialsSection } from "@/components/DifferentialsSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
-import { Footer } from "@/components/Footer";
-import { GitHubSection } from "@/components/GitHubSection";
-import { Header } from "@/components/Header";
-import { HeroSection } from "@/components/HeroSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { StackSection } from "@/components/StackSection";
-import { VisualShowcaseSection } from "@/components/VisualShowcaseSection";
+﻿import { Portfolio } from "@/components/Portfolio";
+import { getGitHubRepos, getGitHubUser, pickFeaturedRepos } from "@/lib/github";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-
-      <main className="site-main">
-        <HeroSection />
-        <AboutSection />
-        <DifferentialsSection />
-        <StackSection />
-        <ProjectsSection />
-        <VisualShowcaseSection />
-        <CaseStudySection />
-        <ExperienceSection />
-        <GitHubSection />
-        <ContactSection />
-      </main>
-
-      <Footer />
-    </>
-  );
+export default async function Home() {
+  const [user, repos] = await Promise.all([getGitHubUser(), getGitHubRepos()]);
+  return <Portfolio user={user} repos={pickFeaturedRepos(repos, 4)} />;
 }

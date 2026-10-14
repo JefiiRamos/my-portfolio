@@ -2,9 +2,9 @@ import type { Dictionary, Locale } from "@/lib/i18n/types";
 
 const pt: Dictionary = {
   meta: {
-    title: "Jeferson Ramos | Front-end Developer",
+    title: "Jefii — Jeferson Ramos | Código com intenção",
     description:
-      "Portfólio de Jeferson Ramos — desenvolvedor front-end em Curitiba. React, Next.js, TypeScript. Projetos reais no GitHub, experiência na Solid Tech e formação em Engenharia de Software.",
+      "Código com intenção. Interface com personalidade. Projetos de Jeferson Ramos, o Jefii, desenvolvedor front-end em Curitiba.",
   },
   common: {
     viewDemo: "Ver demo",
@@ -437,9 +437,9 @@ const pt: Dictionary = {
 
 const en: Dictionary = {
   meta: {
-    title: "Jeferson Ramos | Front-end Developer",
+    title: "Jefii — Jeferson Ramos | Code with intention",
     description:
-      "Portfolio of Jeferson Ramos — front-end developer based in Curitiba, Brazil. React, Next.js, TypeScript. Real projects on GitHub, experience at Solid Tech, and Software Engineering studies.",
+      "Code with intention. Interfaces with personality. Projects by Jeferson Ramos, aka Jefii, a front-end developer in Curitiba, Brazil.",
   },
   common: {
     viewDemo: "View demo",

@@ -50,6 +50,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = useMemo(() => getDictionary(locale), [locale]);
 
+  useEffect(() => {
+    document.title = t.meta.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", t.meta.description);
+  }, [t]);
+
   const value = useMemo(
     () => ({ locale, t, setLocale, toggleLocale }),
     [locale, t, setLocale, toggleLocale],

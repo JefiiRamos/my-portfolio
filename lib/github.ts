@@ -144,6 +144,7 @@ export async function getGitHubUser(): Promise<GitHubUser | null> {
       {
         next: { revalidate: 3600 },
         headers: GITHUB_HEADERS,
+        signal: AbortSignal.timeout(5000),
       },
     );
 
@@ -161,6 +162,7 @@ export async function getGitHubRepos(): Promise<GitHubRepo[]> {
       {
         next: { revalidate: 3600 },
         headers: GITHUB_HEADERS,
+        signal: AbortSignal.timeout(5000),
       },
     );
 
