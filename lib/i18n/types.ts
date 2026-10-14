@@ -33,6 +33,7 @@ export type Project = {
   tech: string[];
   live?: string;
   repo: string;
+  appRepo?: string;
   featured: boolean;
   year: string;
 };
@@ -51,7 +52,8 @@ export type VisualProject = {
   name: string;
   eyebrow: string;
   thesis: string;
-  shots: { src: string; alt: string; label: string }[];
+  shots: { src: string; alt: string; label: string; width?: number; height?: number }[];
+  caption?: string;
   notes: string[];
 };
 

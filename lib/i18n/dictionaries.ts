@@ -169,6 +169,18 @@ const pt: Dictionary = {
           year: "2026",
         },
         {
+          title: "Flow Finance",
+          category: "Finanças pessoais — web & app",
+          description:
+            "Controle financeiro com painel de receitas e despesas, metas, recorrências, simulador e assistente para registrar transações em linguagem natural. Experiência web e aplicativo conectado ao mesmo backend.",
+          tech: ["Next.js", "TypeScript", "React Native", "Expo", "Prisma"],
+          live: "https://flow-finance-five.vercel.app",
+          repo: "https://github.com/JefiiRamos/FlowFinance",
+          appRepo: "https://github.com/JefiiRamos/FlowFinance-APP",
+          featured: true,
+          year: "2026",
+        },
+        {
           title: "plann.er",
           category: "Planejamento",
           description:
@@ -244,6 +256,19 @@ const pt: Dictionary = {
             },
           ],
           notes: ["Serviço evidente", "Layout responsivo", "Contato sem atrito"],
+        },
+        {
+          name: "Flow Finance",
+          eyebrow: "Finanças pessoais — web & app",
+          thesis: "Uma experiência financeira que conecta visão geral, organização diária e assistência em uma identidade escura com destaque violeta.",
+          caption: "Web + app. Capturas do aplicativo com dados de demonstração.",
+          shots: [
+            { src: "/flow-finance-dashboard.png", alt: "Painel web do Flow Finance com resumo financeiro e gráficos", label: "Painel web", width: 1916, height: 944 },
+            { src: "/flow-finance-welcome.png", alt: "Tela de boas-vindas do aplicativo Flow Finance", label: "Boas-vindas", width: 390, height: 844 },
+            { src: "/flow-finance-transactions.png", alt: "Extrato do aplicativo Flow Finance com transações de demonstração", label: "Extrato", width: 390, height: 844 },
+            { src: "/flow-finance-assistant.png", alt: "Assistente do aplicativo Flow Finance registrando uma despesa de demonstração", label: "Assistente", width: 390, height: 844 },
+          ],
+          notes: ["Painel financeiro", "Web e mobile", "Assistente de transações"],
         },
       ],
     },
@@ -604,6 +629,18 @@ const en: Dictionary = {
           year: "2026",
         },
         {
+          title: "Flow Finance",
+          category: "Personal finance — web & app",
+          description:
+            "Personal finance with income and expense dashboards, goals, recurring transactions, a simulator, and an assistant for recording transactions in natural language. A web experience and mobile app connected to the same backend.",
+          tech: ["Next.js", "TypeScript", "React Native", "Expo", "Prisma"],
+          live: "https://flow-finance-five.vercel.app",
+          repo: "https://github.com/JefiiRamos/FlowFinance",
+          appRepo: "https://github.com/JefiiRamos/FlowFinance-APP",
+          featured: true,
+          year: "2026",
+        },
+        {
           title: "plann.er",
           category: "Planning",
           description:
@@ -679,6 +716,19 @@ const en: Dictionary = {
             },
           ],
           notes: ["Clear service", "Responsive layout", "Frictionless contact"],
+        },
+        {
+          name: "Flow Finance",
+          eyebrow: "Personal finance — web & app",
+          thesis: "A finance experience connecting the big picture, everyday organization, and assistance through a dark identity with violet accents.",
+          caption: "Web + app. Mobile screenshots use demo data.",
+          shots: [
+            { src: "/flow-finance-dashboard.png", alt: "Flow Finance web dashboard showing financial summaries and charts", label: "Web dashboard", width: 1916, height: 944 },
+            { src: "/flow-finance-welcome.png", alt: "Flow Finance mobile app welcome screen", label: "Welcome", width: 390, height: 844 },
+            { src: "/flow-finance-transactions.png", alt: "Flow Finance mobile transaction history with demo transactions", label: "Transactions", width: 390, height: 844 },
+            { src: "/flow-finance-assistant.png", alt: "Flow Finance mobile assistant recording a demo expense", label: "Assistant", width: 390, height: 844 },
+          ],
+          notes: ["Financial dashboard", "Web and mobile", "Transaction assistant"],
         },
       ],
     },

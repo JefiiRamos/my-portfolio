@@ -33,6 +33,7 @@ const GITHUB_HEADERS = {
 };
 
 const PRIORITY_REPOS = [
+  "FlowFinance",
   "Triply",
   "jefentregas-cwb",
   "plann.er",
@@ -44,6 +45,8 @@ const PRIORITY_REPOS = [
 
 const REPO_DESCRIPTIONS: Record<Locale, Record<string, string>> = {
   pt: {
+    FlowFinance: "Controle financeiro com painel web, metas, recorrências e assistente de transações.",
+    "FlowFinance-APP": "Aplicativo React Native e Expo conectado ao backend do Flow Finance.",
     Triply:
       "Plataforma web para busca de voos e hotéis, com foco em UI/UX e performance.",
     "jefentregas-cwb":
@@ -57,6 +60,8 @@ const REPO_DESCRIPTIONS: Record<Locale, Record<string, string>> = {
       "Aplicação web para gestão de momentos e fluxos do produto.",
   },
   en: {
+    FlowFinance: "Personal finance with a web dashboard, goals, recurring transactions, and a transaction assistant.",
+    "FlowFinance-APP": "React Native and Expo app connected to the Flow Finance backend.",
     Triply: "Web platform for flight and hotel search, focused on UI/UX and performance.",
     "jefentregas-cwb":
       "Delivery application with responsive UI and production deployment.",

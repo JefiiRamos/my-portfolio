@@ -54,8 +54,11 @@ function ProjectPreview({ index }: {
   const [shot, setShot] = useState(0);
   const project = t.sections.projects.items[index];
   const visuals = t.sections.prints.projects[index];
-  const name = index === 1 ? "Jef Entregas" : project.title;
-  return <article className={`featured-project featured-project--${index}`}>
+  const name = visuals.name;
+  const activeShot = visuals.shots[shot];
+  const isPortrait = (activeShot.height ?? 906) > (activeShot.width ?? 1898);
+  const isFlowFinance = project.title === "Flow Finance";
+  return <article className={`featured-project featured-project--${index}${isFlowFinance ? " featured-project--flow" : ""}`}>
     <div className="project-preview">
       <div className="preview-top">
         <span className="browser-dots" aria-hidden="true">
@@ -64,13 +67,14 @@ function ProjectPreview({ index }: {
           <i />
         </span>
         <span>
-          {index === 0 ? "triplyfly.vercel.app" : "jefentregas-cwb.vercel.app"}
+          {isPortrait ? `${name} / App` : project.live ? new URL(project.live).hostname : name}
         </span>
         <Arrow diagonal />
       </div>
-      <div className="project-preview__image">
-        <Image key={visuals.shots[shot].src} src={visuals.shots[shot].src} alt={visuals.shots[shot].alt} width={1898} height={906} sizes="(max-width: 760px) 100vw, 50vw" />
+      <div className={`project-preview__image${isPortrait ? " project-preview__image--portrait" : ""}`}>
+        <Image key={activeShot.src} src={activeShot.src} alt={activeShot.alt} width={activeShot.width ?? 1898} height={activeShot.height ?? 906} sizes={isPortrait ? "200px" : "(max-width: 760px) 100vw, 60vw"} />
       </div>
+      {visuals.caption && <p className="preview-caption">{visuals.caption}</p>}
       <div className="preview-controls" role="group" aria-label={`${p.screens}: ${name}`}>
         <span>
           {visuals.shots[shot].label}
@@ -102,14 +106,18 @@ function ProjectPreview({ index }: {
         </span>)}
       </div>
       <div className="project-actions">
-        <a href={project.live} target="_blank" rel="noreferrer" className="text-link">
+        {project.live && <a href={project.live} target="_blank" rel="noreferrer" className="text-link">
           {p.live}
           <Arrow diagonal />
-        </a>
+        </a>}
         <a href={project.repo} target="_blank" rel="noreferrer" className="subtle-link">
           {p.source}
           <span aria-hidden="true">↗</span>
         </a>
+        {project.appRepo && <a href={project.appRepo} target="_blank" rel="noreferrer" className="subtle-link">
+          {p.appCode}
+          <span aria-hidden="true">↗</span>
+        </a>}
       </div>
       {index === 0 && <details className="project-details">
         <summary>
@@ -284,15 +292,14 @@ export function Portfolio({ user, repos }: {
           <span aria-hidden="true">↓</span>
         </div>
         <div className="featured-grid">
-          <ProjectPreview index={0} />
-          <ProjectPreview index={1} />
+          {t.sections.prints.projects.map((project, index) => <ProjectPreview index={index} key={project.name} />)}
         </div>
         <div className="other-projects">
           <p className="eyebrow">
             {p.other}
           </p>
-          {t.sections.projects.items.slice(2).map((project, i) => <a className="project-row" href={project.repo} target="_blank" rel="noreferrer" key={project.title}>
-            <span className="project-row__index">0{i + 3}</span>
+          {t.sections.projects.items.slice(t.sections.prints.projects.length).map((project, i) => <a className="project-row" href={project.repo} target="_blank" rel="noreferrer" key={project.title}>
+            <span className="project-row__index">{String(i + t.sections.prints.projects.length + 1).padStart(2, "0")}</span>
             <h3>
               {project.title}
             </h3>
